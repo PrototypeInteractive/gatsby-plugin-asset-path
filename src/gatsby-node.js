@@ -37,7 +37,7 @@ export const onPostBuild = async ({ pathPrefix }, { additionalPaths = [] }) => {
     fs.readdirSync(folder).filter((file) => /.*\.(js|css)$/.test(file));
 
   const filesInPublicFolder = filterFilesIn(publicFolder);
-  const directories = ["static", "icons", "page-data"];
+  const directories = ["static", "page-data"];
   const thingsToMove = directories
     .concat(filesInPublicFolder)
     .concat(additionalPaths);
